@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인화면 만들기</title>
+    <link rel="stylesheet" href="LoginClone.css">
+</head>
+
+
+
+<header>
+    <div class="UpperHead">
+        <img src="./55.png" alt="제일 상단 아이콘" class="icon"><a href="cloneCoding.html"></a>
+        <ul class="nav-link">
+            <li><a href="#">Contents</a></li>
+        </ul>
+        <a href="LoginClone.html" class="btn-rounded"><button class="btn-round">Log In</button></a>
+    </div>
+</header>
+
+
+
+
+
+
+<form action="">
+    <div class="Upper-content">
+    </div>
+    <div class="The">
+        <form action="#" method="post">
+            <input type="text" for="id" name="id" id="id" placeholder="아이디"><br>
+            <input type="password" for="pw" name="pw" id="pw" placeholder="비밀번호"><br>
+            <div class="lobg">
+                <input class="logb" type="submit" value="로그인" onclick="login()">
+            </div>
+        </form>
+
+
+
+
+        <div >
+            <h4 class="reg">아직회원이 아니신가요?</h4>
+            <div ><a class="loga" href="register.html">회원가입하기</a></div>
+            
+           <a class="loga" href="mango.html">15일 가입없이 시작하기</a>
+        </div>
+</form>
+</div>
+
+
+
+<script>
+    function login() {
+        const id = document.querySelector("#id")
+        const pw = document.querySelector("#pw")
+        if (id.value === '' || pw.value === '') {
+            alert('아이디 혹은 비밀번호를 입력해주세요')
+
+        }
+
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <header>
+        <div class="UpperHead">
+            <img src="./55.png" alt="제일 상단 아이콘" class="icon"><a href="cloneCoding.html"></a>
+            <ul class="nav-link">
+                <li><a href="#">Contents</a></li>
+            </ul>
+            <a href="LoginClone.html" class="btn-rounded"><button class="btn-round">Log In</button></a>
+        </div>
+    </header>
+
+
+    <div class="content">
+        <form name="login_member" action="# " method="post">
+            <div class="Ids">
+                <label>아이디<input type="text" name="id" id="id"></label>
+                <button type="button" onclick="id_check()">중복확인</button>
+            </div>
+            <div class="pws">비밀번호 <input type="password" name="password" id="password"></div>
+            <div>비밀번호확인 <input type="password" name="re_password" id="re_password"></div>
+            <div class="names">
+                <label>이름<input type="text" name="username" id="username"></label>
+            </div>
+            <div class="dates">
+                <label>생년월일 <input type="text" name="yy" placeholder="년도(숫자4)" max="4">
+                    <select name="mm" id="mm">
+                        <option value="1월">1</option>
+                        <option value="2월">2</option>
+                        <option value="3월">3</option>
+                        <option value="4월">4</option>
+                        <option value="5월">5</option>
+                        <option value="6월">6</option>
+                        <option value="7월">7</option>
+                        <option value="8월">8</option>
+                        <option value="9월">9</option>
+                        <option value="10월">10</option>
+                        <option value="11월">11</option>
+                        <option value="12월">12</option>
+                    </select>
+                    <span>월</span>
+                </label>
+                <input type="text" name="dd" id="dd" placeholder="일" maxlength="2">
+            </div>
+            <div class="fm">
+                <label>
+                    성별 <input type="radio" value="M" name="gender" id="male">남자
+                    <input type="radio" value="F" name="gender" id="female">여자
+                </label>
+            </div>
+            <div class="phones">
+                <label>
+                    전화번호 <input type="text" name="mobile" id="mobile" placeholder="-없이 숫자만">
+                </label>
+            </div>
+            <div class="emails">
+                <label>
+                    <label>이메일<input type="text" name="email_1" id="email_1"> @ 
+                        <input type="text" name="email_2" id="email_2"> 
+                        <select name="eamil_3" id="email_3" onchange="change_email()">
+                        <option value="">직접입력</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="naver.com">naver.com</option>
+                    </select>
+                </label>
+            </div>
+            <div class="addres">
+                <label>
+                    주소 <input type="text" name="total_add" id="total_add">
+                </label>
+                <button type="button" onclick="search_add()">주소검색</button>
+            </div>
+            <div class="addres1">
+                <label>
+                    기본주소 <input type="text" name="base_add" id="base_add">
+                </label>
+            </div>
+            <div class="addres2">
+                <label>
+                    상세주소 <input type="text" name="detail_add" id="detail_add">
+                </label>
+            </div>
+            <div class="con">
+                <label>
+                    약관동의 <input type="checkbox" name="agree" id="agree" value="Y">귀하의 쇼핑몰에 회원으로 가입합니다
+                </label>
+            </div>
+            <div class="btn_div">
+                <button type="button" onclick="history_back()">이전으로</button>
+                <button type="button" onclick="member_chk()">가입하기</button>
+            </div>
+        </form>
+
+        <div class="YA" onclick="plan_chk()">
+            <h2>기본</h2>
+            <ul>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+                <li>플랜내용1</li>
+            </ul>
+            <h1>월 $0</h1>
+        </div>
+
+        <div class="NA" onclick="plan_chk()">
+            <h1>No광고</h1>
+            <ul>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+            <li>플랜내용1</li>
+        </ul>
+            <h1>월 $5</h1>
+        </div>
+
+    </div>
+    <script>
+        //1단계 해당 태그를 선택하기
+           
+    
+       function id_check(){
+           //아이디 중복확인
+          //서버에 id.value값을 넣어서 요청을 하면 서버에서 데이터베이스로 보내서 검색한후 응답한 값과 비교)
+          if( id.value=='admin') {
+              alert('이미 가입된 회원입니다');
+              id.focus();
+              false;
+          }
+       }
+       function change_email(){
+           //이메일 뒷부분 자동입력
+         var sIndex = email_3.options.selectedIndex;
+         var sVal = email_3.options[sIndex].value;
+         email_2.value = sVal;
+    
+       }
+       function search_address(){
+           //주소검색하기 
+       }
+       function history_back(){
+           //이전으로 되돌아가기
+           history.back();
+       }
+       function member_chk(){
+    
+        var id=document.getElementById("id");//필수
+           var pwd = document.getElementById("password");//필수
+           var re_password = document.getElementById("re_password");//필수
+           var username = document.getElementById("username");//필수
+           var male = document.getElementById("male");
+           var female = document.getElementById("female");
+           var mobile = document.getElementById("mobile");//필수
+           var email_1 = document.getElementById("email_1");
+           var email_2 = document.getElementById("email_2");
+           var email_3 = document.getElementById("email_3");
+           var total_add = document.getElementById("total_add");
+           var base_add = document.getElementById("base_add");
+           var detail_add = document.getElementById("detail_add");
+           var agree = document.getElementById("agree");//필수
+           //가입하기 유효성 검사를 하고 모두 통과되면 submit로 만들어 보내기 
+           
+          //2단계 필수인 것을 공백인지 체크하기  
+           if( id.value == '') {
+               alert('아이디를 입력해 주세요');
+               id.focus();
+               return false;
+           }
+           if( pwd.value == '') {
+               alert('비밀번호를 입력해 주세요');
+               pwd.focus();
+               return false;
+           }
+           if( re_password.value == '') {
+               alert('비밀번호 확인을 입력해 주세요');
+               re_password.focus();
+               return false;
+           }
+           
+           //비밀번호 체크
+           //1) 비밀번호 유효성 검사 정규표현문 영문자+숫자+특수문자(8자~24자) 
+           //2) 비밀번호 비밀번호확인이랑 같은지 검사
+           var pwReq =  /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{1,5}$/;
+           if( !pwReq.test(pwd.value) ) {
+               alert("비밀번호는 영문자+숫자+특수문자(8자~24자)의 조합입니다. ");
+               pwd.focus();
+               false;
+           }
+    
+           if( !pwReq.test(re_password.value) ) {
+               alert("비밀번호확인은 영문자+숫자+특수문자(8자~24자)의 조합입니다. ");
+               pwd.focus();
+               false;
+           }
+           if( pwd.value != re_password.value) {
+               alert("비밀번호확인이 비밀번호와 틀립니다 ");
+               re_password.focus();
+               false;
+           }
+           
+    
+           if( username.value == '') {
+               alert('이름을 입력해 주세요');
+               username.focus();
+               return false;
+           }
+    
+           if( mobile.value == '') {
+               alert('전화번호를 입력해 주세요');
+               mobile.focus();
+               return false;
+           }
+    
+           //전화번호는 숫자만 유효성검사 정규표현식 
+           var mobile = document.getElementById("mobile");
+           var telReg = /^[0-9]+/
+           if( !telReg.test(mobile.value) ){
+               alert('전화번호에 숫자만 입력해 주세요');
+               mobile.focus();
+               return false;
+           }
+    
+           if( !agree.checked ){
+               alert('약관동의를 체크해 주세요');
+               return false;
+           }
+    
+           //유효성 검사 모두 통과했으면 submit()로 서버에 자료 전송
+           document.login_member.submit();
+       }
+    </script>
+</body>
+
+</html>
