@@ -9,8 +9,8 @@
   
 }
 .bv {
-    border: 1px solid red;
-    color: red;
+    border: 1px solid salmon;
+    color: salmon;
     cursor: pointer;
     background-color: transparent;
     border-radius: 100px;
@@ -19,6 +19,7 @@
   
 }
 body{font-family: 'Montserrat' sans-serif;
+
 }
 
 @media only screen and (min-width:1200px){
@@ -155,7 +156,7 @@ font-weight: 500;
 }
 
 section{
-    
+  
 padding: 4rem 0rem 4rem;
 
 }
@@ -170,56 +171,60 @@ color: white;}
 .row{
     display:flex;
     grid-template-columns: auto auto;
-    grid-template-rows: 250px;
-  
-}
+   }
 
 .image{
-    width: 50%;
+    width: 35%;
     object-fit: cover;
-    max-height: 300px;
-}
+   }
+
 .contents{
 width: 60%;
 
-margin: auto;
+
 }
 img{
-    width: 100%;
-    height: 300px;
+    width: 350px;
+    height: 250px;
+    border-radius: 30px;
     padding: 6px;
 }
-figure {
-    margin: 0;
-    position: relative
-  }
-  
-  .bottom-left h3{
-    z-index: 50;
-    position: absolute;
-    color: white;
-    font-size: 24px;
+.fig {
+    position:relative;
+    text-align: center;
     
-    margin: 0;
-    left: 6em;
-    bottom: 6.5em;
-  }
+    }
 
+
+
+
+.bottom-left3{
+   
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.bottom-left2{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
 
 
 
   .sidebar{
       position: absolute;
-      background: rgb(212, 212, 212);
-      width: 200px;
+      background: salmon;
+      width: 300px;
       height: auto;
       top: 70px;
       right: 0;
       z-index: -99;
-
+text-align: center;
   }
 
-  .sidebar img{
+.sidebar img{
       height: 200px;
   }
 #loadMore {
@@ -229,11 +234,11 @@ figure {
     margin: auto;
 }
 #loadMore a {
-    background: #faa635;
+    background: salmon;
     border-radius: 3px;
     color: white;
     display: inline-block;
-    padding: 10px 30px;
+    padding: 7px 20px;
     transition: all 0.25s ease-out;
     -webkit-font-smoothing: antialiased;
   
