@@ -11,13 +11,16 @@
 </head>
 
 <body>
+
     <header>
         <div class="UpperHead">
-            <img src="./55.png" alt="제일 상단 아이콘" class="icon"><a href="cloneCoding.html"></a>
+            <a href="cloneCoding.html"><img src="./55.png" alt="제일 상단 아이콘" class="icon"></a>
             <ul class="nav-link">
                 <li><a href="#">Contents</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="LoginClone.html" class="btn-rounded"><button class="btn-round">Log In</button></a></li>
             </ul>
-            <a href="LoginClone.html" class="btn-rounded"><button class="btn-round">Log In</button></a>
+         
         </div>
     </header>
 
@@ -102,15 +105,15 @@
             </div>
         </form>
 
-        <div class="YA" onclick="plan_chk()">
+        <div class="basic" onclick="plan_chk()">
             <h2>기본</h2>
             <ul>
-                <li>플랜내용1</li>
-                <li>플랜내용1</li>
-                <li>플랜내용1</li>
-                <li>플랜내용1</li>
-                <li>플랜내용1</li>
-                <li>플랜내용1</li>
+                <li>아직</li>
+                <li>효과</li>
+                <li>못만듬</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
                 <li>플랜내용1</li>
                 <li>플랜내용1</li>
                 <li>플랜내용1</li>
@@ -123,15 +126,15 @@
             <h1>월 $0</h1>
         </div>
 
-        <div class="NA" onclick="plan_chk()">
+        <div class="special" onclick="plan_chk()">
             <h1>No광고</h1>
             <ul>
-            <li>플랜내용1</li>
-            <li>플랜내용1</li>
-            <li>플랜내용1</li>
-            <li>플랜내용1</li>
-            <li>플랜내용1</li>
-            <li>플랜내용1</li>
+            <li>아직</li>
+            <li>효과</li>
+            <li>못만듬</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
             <li>플랜내용1</li>
             <li>플랜내용1</li>
             <li>플랜내용1</li>
@@ -170,6 +173,11 @@
        function history_back(){
            //이전으로 되돌아가기
            history.back();
+       }
+
+       function plan_chk(){
+           var basic = document.getElementById("basic");
+           var special= document.getElementById("special");
        }
        function member_chk(){
     

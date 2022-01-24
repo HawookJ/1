@@ -2,8 +2,8 @@ body{
     background-color: black;
 }
 form {
-    width: 800px;
-    
+    width: 600px;
+    margin-left: 10%;
     border: 3px solid red;
     line-height: 2.5em;
     font-weight: bolder;
@@ -17,7 +17,29 @@ form {
 #dd {
     width: 40px;
 }
-
+.btn-round {
+    background-color: rgb(235, 102, 102);
+    padding: 9px 25px;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: medium;
+    color: white;
+  }
+  .btn-round:hover {
+    color: red;
+  }
+  
+  .btn-30p {
+    padding: 20px 20px;
+    background-color: rgb(235, 102, 102);
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+  }
+  p {
+    margin: 0.5rem 0;
+  }
 .btn_div {
   position: absolute;
  padding: 10px 10px; 
@@ -68,68 +90,42 @@ margin-left: 900px;
 }
 
 
-
 .UpperHead {
-	display: flex;
-    justify-content: flex-end;
-    padding: 10px ;
-
-}
-.btn-round{
-    background-color: rgb(235, 102, 102);
-    padding: 9px 25px;
-    border-radius: 10px;
-    font-weight: bolder;
-    font-size:medium;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+    height: 70px;
+  }
+  .nav-link {
+    list-style: none;
+  }
+  .nav-link li {
+    display: inline-block;
+    padding: 30px;
+  }
+  .nav-link li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
     color: white;
-    margin-right: 200px;
-    }
-
-    .btn-round:hover{
-        color: red;
-        
-    }
-.btn-rounded{
-text-decoration: none;
-font-weight: bolder;
-font-size:medium;
-}
-
-.nav-link{
-	list-style: none;
-
-}
-.nav-link li{
-	display: inline-block;
-	padding: 15px 200px;
-	
-
-
-}
-.nav-link li a{
-	transition: all 0.3s ease 0s;
-	text-decoration: none;
-	font-weight: bolder;
-	color: white;
-	}
-	.nav-link li a:hover{
-	color: red
-	}
-
-
-.icon{
-cursor: pointer;
-margin-right: auto;
-margin-left: 200px;
-}
+  }
+  .nav-link li a:hover {
+    color: red;
+  }
+  /* ----------- */
+  .icon {
+    cursor: pointer;
+    margin-top: 15%;
+  }
 
 .content{
     display: grid;
     grid-template-columns: auto 20% 20%;
 }
-.YA{
+.basic{
     color: white;
 }
-.NA{
+.special{
     color: white;
 }
